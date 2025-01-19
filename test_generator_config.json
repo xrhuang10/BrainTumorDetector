@@ -1,0 +1,1 @@
+{"testing_path": "tumorsDataset/testing", "image_size": [150, 150], "batch_size": 32, "class_mode": "categorical", "shuffle": false}
