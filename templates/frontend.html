@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Brain Tumor Detector</h1>
+
+    <div>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <!-- File input -->
+            <div>
+                <label for="file-upload">
+                    <img src="{{ url_for('static', filename='braintumor.jpg') }}" alt="Upload" width="150" height="150" id="uploadpicture">
+                    <input type="file" id="file-upload" name="file" accept="image/*" style="display:none;" required>
+                </label>
+            </div>
+            <div>
+                <button type="submit" id="submit">Predict</button>
+                <p>Result: <span id="tumor-result">{{ result }}</span></p>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <a href="https://github.com/xrhuang10/BrainTumorDetector" target="_blank">
+            <button class="externallink">Project Link</button>
+        </a>
+    </div>
+</body>
+
+<footer>
+    Made by Xirui Huang, 2025 &copy;
+</footer>
+</html>
